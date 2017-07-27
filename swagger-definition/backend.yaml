@@ -1,0 +1,43 @@
+swagger: "2.0"
+info:
+  description: "the backend server"
+  version: "1.0.0"
+  title: "backend server"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+tags:
+- name: "backend"
+  description: "Everything about the backend"
+schemes:
+- "http"
+paths:
+  /greeting:
+    post:
+      tags:
+      - "backend"
+      summary: "post a new greeting"
+      operationId: "addGreeting"
+      consumes:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "greeting"
+        description: "the greeting"
+        required: true
+        schema:
+          $ref: "#/definitions/Greeting"
+      responses:
+        200:
+          description: "greeting has been posted"
+definitions:
+  Greeting:
+    type: "object"
+    properties:
+      from:
+        type: "string"
+      time:
+        type: "integer"
+        format: "int64"
+      text:
+        type: "string"

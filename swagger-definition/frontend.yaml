@@ -1,0 +1,39 @@
+swagger: "2.0"
+info:
+  description: "the frontend server"
+  version: "1.0.0"
+  title: "frontend server"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+tags:
+- name: "frontend"
+  description: "Everything about the frontend"
+schemes:
+- "http"
+paths:
+  /greeting:
+    post:
+      tags:
+      - "frontend"
+      summary: "delegate a new greeting to backend"
+      operationId: "addGreeting"
+      consumes:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "greeting"
+        description: "the greeting"
+        required: true
+        schema:
+          $ref: "backend.yaml#/definitions/Greeting"
+      responses:
+        200:
+          description: "greeting has been posted"
+definitions:
+  Other:
+    type: "object"
+    properties:
+      field:
+        type: "string"
+
