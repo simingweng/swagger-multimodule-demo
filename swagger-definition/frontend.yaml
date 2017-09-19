@@ -26,11 +26,14 @@ paths:
         description: "the greeting"
         required: true
         schema:
-          $ref: "backend.yaml#/definitions/Greeting"
+          $ref: "#/definitions/Greeting"
       responses:
         200:
           description: "greeting has been posted"
 definitions:
+  #this definition only serve as a placeholder to reuse the Greeting model class defined externally
+  Greeting:
+    type: "object"
   Other:
     type: "object"
     properties:
