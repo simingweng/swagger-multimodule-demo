@@ -34,10 +34,5 @@ definitions:
   Greeting:
     type: "object"
     properties:
-      from:
-        type: "string"
-      time:
-        type: "integer"
-        format: "int64"
       text:
         type: "string"

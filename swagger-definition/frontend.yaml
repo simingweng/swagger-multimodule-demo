@@ -17,26 +17,31 @@ paths:
       tags:
       - "frontend"
       summary: "delegate a new greeting to backend"
-      operationId: "addGreeting"
+      operationId: "addConversation"
       consumes:
       - "application/json"
       parameters:
       - in: "body"
-        name: "greeting"
-        description: "the greeting"
+        name: "conversation"
+        description: "the conversation"
         required: true
         schema:
-          $ref: "#/definitions/Greeting"
+          $ref: "#/definitions/Conversation"
       responses:
         200:
           description: "greeting has been posted"
 definitions:
+  Conversation:
+    type: "object"
+    properties:
+      from:
+        type: "string"
+      time:
+        type: "integer"
+        format: "int64"
+      greet:
+        $ref: "#/definitions/Greeting"
   #this definition only serve as a placeholder to reuse the Greeting model class defined externally
   Greeting:
     type: "object"
-  Other:
-    type: "object"
-    properties:
-      field:
-        type: "string"
 

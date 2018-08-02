@@ -9,17 +9,8 @@
         <module name="swagger-backend-client" />
         <module name="swagger-backend-model" />
         <module name="swagger-backend-server" />
-        <module name="swagger-fontend-server" />
         <module name="swagger-frontend-server" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="swagger-backend-client" target="1.8" />
-      <module name="swagger-backend-model" target="1.8" />
-      <module name="swagger-backend-server" target="1.8" />
-      <module name="swagger-fontend-server" target="1.8" />
-      <module name="swagger-frontend-server" target="1.8" />
-      <module name="swagger-multimodule-demo" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>

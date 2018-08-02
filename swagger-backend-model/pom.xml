@@ -28,6 +28,7 @@
                             <language>java</language>
                             <library>resttemplate</library>
                             <modelPackage>com.simon.swagger.backend.model</modelPackage>
+                            <!--we want to generate model classes only, neither server stub nor client library-->
                             <generateApis>false</generateApis>
                             <generateSupportingFiles>false</generateSupportingFiles>
                             <generateModelTests>false</generateModelTests>
