@@ -6,10 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="swagger-backend-client" />
-        <module name="swagger-backend-model" />
-        <module name="swagger-backend-server" />
-        <module name="swagger-frontend-server" />
+        <module name="openapi-backend-client" />
+        <module name="openapi-backend-model" />
+        <module name="openapi-backend-server" />
+        <module name="openapi-frontend-server" />
       </profile>
     </annotationProcessing>
   </component>
