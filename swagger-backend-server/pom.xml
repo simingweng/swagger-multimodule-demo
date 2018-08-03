@@ -48,6 +48,11 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>2.9.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.github.joschi.jackson</groupId>
+            <artifactId>jackson-datatype-threetenbp</artifactId>
+            <version>2.8.4</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -68,9 +73,9 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-codegen-maven-plugin</artifactId>
-                <version>2.2.3</version>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <version>3.1.2</version>
                 <executions>
                     <execution>
                         <id>backend-server</id>
@@ -79,7 +84,7 @@
                         </goals>
                         <configuration>
                             <inputSpec>${project.basedir}/../swagger-definition/backend.yaml</inputSpec>
-                            <language>spring</language>
+                            <generatorName>spring</generatorName>
                             <!--the model package needs to be aligned with the model sub module-->
                             <modelPackage>com.simon.swagger.backend.model</modelPackage>
                             <apiPackage>com.simon.swagger.backend.api</apiPackage>

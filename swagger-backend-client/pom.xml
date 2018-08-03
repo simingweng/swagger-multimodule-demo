@@ -14,9 +14,9 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>io.swagger</groupId>
-                <artifactId>swagger-codegen-maven-plugin</artifactId>
-                <version>2.2.3</version>
+                <groupId>org.openapitools</groupId>
+                <artifactId>openapi-generator-maven-plugin</artifactId>
+                <version>3.1.2</version>
                 <executions>
                     <execution>
                         <id>backend-client</id>
@@ -25,7 +25,7 @@
                         </goals>
                         <configuration>
                             <inputSpec>${project.basedir}/../swagger-definition/backend.yaml</inputSpec>
-                            <language>java</language>
+                            <generatorName>java</generatorName>
                             <library>resttemplate</library>
                             <!--the model package needs to be aligned with the model sub module-->
                             <modelPackage>com.simon.swagger.backend.model</modelPackage>
@@ -55,6 +55,11 @@
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
             <version>1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.joschi.jackson</groupId>
+            <artifactId>jackson-datatype-threetenbp</artifactId>
+            <version>2.6.4</version>
         </dependency>
         <dependency>
             <groupId>com.simon</groupId>
