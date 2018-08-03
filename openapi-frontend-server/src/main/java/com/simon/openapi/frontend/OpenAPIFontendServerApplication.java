@@ -9,10 +9,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication(scanBasePackages = {"com.simon.openapi.frontend", "com.simon.openapi.backend"})
 @EnableSwagger2
-public class SwaggerFontendServerApplication {
+public class OpenAPIFontendServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SwaggerFontendServerApplication.class, args);
+        SpringApplication.run(OpenAPIFontendServerApplication.class, args);
     }
 
     @Bean

@@ -6,9 +6,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class SwaggerBackendServerApplication {
+public class OpenAPIBackendServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SwaggerBackendServerApplication.class, args);
+        SpringApplication.run(OpenAPIBackendServerApplication.class, args);
     }
 }
