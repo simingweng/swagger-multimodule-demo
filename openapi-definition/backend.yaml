@@ -1,4 +1,4 @@
-swagger: "2.0"
+openapi: "3.0.1"
 info:
   description: "the backend server"
   version: "1.0.0"
@@ -9,8 +9,6 @@ info:
 tags:
 - name: "backend"
   description: "Everything about the backend"
-schemes:
-- "http"
 paths:
   /greeting:
     post:
@@ -18,21 +16,20 @@ paths:
       - "backend"
       summary: "post a new greeting"
       operationId: "addGreeting"
-      consumes:
-      - "application/json"
-      parameters:
-      - in: "body"
-        name: "greeting"
+      requestBody:
         description: "the greeting"
         required: true
-        schema:
-          $ref: "#/definitions/Greeting"
+        content:
+          application/vnd.simon.openapi.demo.greeting.v1+json:
+            schema:
+              $ref: "#/components/schemas/Greeting"
       responses:
         200:
           description: "greeting has been posted"
-definitions:
-  Greeting:
-    type: "object"
-    properties:
-      text:
-        type: "string"
+components:
+  schemas:
+    Greeting:
+      type: "object"
+      properties:
+        text:
+          type: "string"

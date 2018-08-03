@@ -3,13 +3,13 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>swagger-multimodule-demo</artifactId>
+        <artifactId>openapi-multimodule-demo</artifactId>
         <groupId>com.simon</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>swagger-backend-client</artifactId>
+    <artifactId>openapi-backend-client</artifactId>
 
     <build>
         <plugins>
@@ -24,13 +24,13 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/../swagger-definition/backend.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/../openapi-definition/backend.yaml</inputSpec>
                             <generatorName>java</generatorName>
                             <library>resttemplate</library>
                             <!--the model package needs to be aligned with the model sub module-->
-                            <modelPackage>com.simon.swagger.backend.model</modelPackage>
-                            <apiPackage>com.simon.swagger.backend.client.api</apiPackage>
-                            <invokerPackage>com.simon.swagger.backend.client.invoker</invokerPackage>
+                            <modelPackage>com.simon.openapi.backend.model</modelPackage>
+                            <apiPackage>com.simon.openapi.backend.client.api</apiPackage>
+                            <invokerPackage>com.simon.openapi.backend.client.invoker</invokerPackage>
                             <!--we don't want to generate the model, since we have a dedicated separate model sub module for that-->
                             <generateModels>false</generateModels>
                             <generateApiTests>false</generateApiTests>
@@ -63,7 +63,7 @@
         </dependency>
         <dependency>
             <groupId>com.simon</groupId>
-            <artifactId>swagger-backend-model</artifactId>
+            <artifactId>openapi-backend-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

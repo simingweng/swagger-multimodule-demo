@@ -1,8 +1,8 @@
-package com.simon.swagger.frontend;
+package com.simon.openapi.frontend;
 
-import com.simon.swagger.backend.client.api.BackendApi;
-import com.simon.swagger.frontend.api.FrontendApiDelegate;
-import com.simon.swagger.frontend.model.Conversation;
+import com.simon.openapi.backend.client.api.BackendApi;
+import com.simon.openapi.frontend.api.FrontendApiDelegate;
+import com.simon.openapi.frontend.model.Conversation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

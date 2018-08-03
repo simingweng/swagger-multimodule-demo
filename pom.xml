@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.simon</groupId>
-    <artifactId>swagger-multimodule-demo</artifactId>
+    <artifactId>openapi-multimodule-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>swagger-multimodule-demo</name>
-    <description>Demo project for sharing swagger generated artifacts</description>
+    <name>openapi-multimodule-demo</name>
+    <description>Demo project for sharing openapi generated artifacts</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,10 +25,10 @@
     </properties>
 
     <modules>
-        <module>swagger-backend-model</module>
-        <module>swagger-backend-client</module>
-        <module>swagger-backend-server</module>
-        <module>swagger-frontend-server</module>
+        <module>openapi-backend-model</module>
+        <module>openapi-backend-client</module>
+        <module>openapi-backend-server</module>
+        <module>openapi-frontend-server</module>
     </modules>
 
 </project>

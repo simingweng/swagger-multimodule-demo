@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>swagger-backend-server</artifactId>
+    <artifactId>openapi-backend-server</artifactId>
 
-    <name>swagger-backend-server</name>
+    <name>openapi-backend-server</name>
     <description>Demo project for generated backend server</description>
 
     <parent>
         <groupId>com.simon</groupId>
-        <artifactId>swagger-multimodule-demo</artifactId>
+        <artifactId>openapi-multimodule-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -35,7 +35,7 @@
         </dependency>
         <dependency>
             <groupId>com.simon</groupId>
-            <artifactId>swagger-backend-model</artifactId>
+            <artifactId>openapi-backend-model</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -83,11 +83,11 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/../swagger-definition/backend.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/../openapi-definition/backend.yaml</inputSpec>
                             <generatorName>spring</generatorName>
                             <!--the model package needs to be aligned with the model sub module-->
-                            <modelPackage>com.simon.swagger.backend.model</modelPackage>
-                            <apiPackage>com.simon.swagger.backend.api</apiPackage>
+                            <modelPackage>com.simon.openapi.backend.model</modelPackage>
+                            <apiPackage>com.simon.openapi.backend.api</apiPackage>
                             <supportingFilesToGenerate>README.md</supportingFilesToGenerate>
                             <generateApiTests>false</generateApiTests>
                             <generateModelTests>false</generateModelTests>

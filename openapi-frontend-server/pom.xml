@@ -3,14 +3,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>swagger-frontend-server</artifactId>
+    <artifactId>openapi-frontend-server</artifactId>
 
-    <name>swagger-frontend-server</name>
-    <description>Demo project for swagger generated frontend server</description>
+    <name>openapi-frontend-server</name>
+    <description>Demo project for openapi generated frontend server</description>
 
     <parent>
         <groupId>com.simon</groupId>
-        <artifactId>swagger-multimodule-demo</artifactId>
+        <artifactId>openapi-multimodule-demo</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
@@ -35,7 +35,7 @@
         </dependency>
         <dependency>
             <groupId>com.simon</groupId>
-            <artifactId>swagger-backend-client</artifactId>
+            <artifactId>openapi-backend-client</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
@@ -83,14 +83,14 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/../swagger-definition/frontend.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/../openapi-definition/frontend.yaml</inputSpec>
                             <generatorName>spring</generatorName>
-                            <modelPackage>com.simon.swagger.frontend.model</modelPackage>
-                            <apiPackage>com.simon.swagger.frontend.api</apiPackage>
+                            <modelPackage>com.simon.openapi.frontend.model</modelPackage>
+                            <apiPackage>com.simon.openapi.frontend.api</apiPackage>
                             <supportingFilesToGenerate>README.md</supportingFilesToGenerate>
                             <generateApiTests>false</generateApiTests>
                             <generateModelTests>false</generateModelTests>
-                            <importMappings>Greeting=com.simon.swagger.backend.model.Greeting</importMappings>
+                            <importMappings>Greeting=com.simon.openapi.backend.model.Greeting</importMappings>
                             <configOptions>
                                 <delegatePattern>true</delegatePattern>
                                 <useTags>true</useTags>

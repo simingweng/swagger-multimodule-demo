@@ -3,13 +3,13 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>swagger-multimodule-demo</artifactId>
+        <artifactId>openapi-multimodule-demo</artifactId>
         <groupId>com.simon</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>swagger-backend-model</artifactId>
+    <artifactId>openapi-backend-model</artifactId>
 
     <build>
         <plugins>
@@ -24,10 +24,10 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <inputSpec>${project.basedir}/../swagger-definition/backend.yaml</inputSpec>
+                            <inputSpec>${project.basedir}/../openapi-definition/backend.yaml</inputSpec>
                             <generatorName>java</generatorName>
                             <library>resttemplate</library>
-                            <modelPackage>com.simon.swagger.backend.model</modelPackage>
+                            <modelPackage>com.simon.openapi.backend.model</modelPackage>
                             <!--we want to generate model classes only, neither server stub nor client library-->
                             <generateApis>false</generateApis>
                             <generateSupportingFiles>false</generateSupportingFiles>

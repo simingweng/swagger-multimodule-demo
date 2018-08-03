@@ -1,7 +1,7 @@
-package com.simon.swagger.backend;
+package com.simon.openapi.backend;
 
-import com.simon.swagger.backend.api.BackendApiDelegate;
-import com.simon.swagger.backend.model.Greeting;
+import com.simon.openapi.backend.api.BackendApiDelegate;
+import com.simon.openapi.backend.model.Greeting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;

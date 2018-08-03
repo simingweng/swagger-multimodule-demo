@@ -1,4 +1,4 @@
-package com.simon.swagger.frontend;
+package com.simon.openapi.frontend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-@SpringBootApplication(scanBasePackages = {"com.simon.swagger.frontend", "com.simon.swagger.backend"})
+@SpringBootApplication(scanBasePackages = {"com.simon.openapi.frontend", "com.simon.openapi.backend"})
 @EnableSwagger2
 public class SwaggerFontendServerApplication {
 

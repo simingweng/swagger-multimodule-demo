@@ -1,4 +1,4 @@
-package com.simon.swagger.backend;
+package com.simon.openapi.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
